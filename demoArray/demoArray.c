@@ -11,18 +11,18 @@ int main()
     //初始化
     //方法一：使用定义初始化
     //
-    #if 0
+#if 1
     int array[BUFFER_SIZE]={0};
-    #else
+ #else
     int array[BUFFER_SIZE];
     #endif
 
-    #if 0
+#if 1
     for (int idx = 0; idx < BUFFER_SIZE ; idx++)
     {
         printf("array[%d]=%d\n",idx,array[idx]);
     }
-    #else
+#else
     int len = sizeof(array);
     // printf("len:%d\n",len);
     // printf("%p\n",array);
@@ -41,6 +41,15 @@ int main()
     //十进制   
     //十六进制 0x
     //数组的地址就是数组首元素的地址
-   #endif
+#endif
+//数组的越界访问
+//判断索引的有效性:索引必须是合理的范围RANGE[0 - BUFFER_SIZE -1]
+printf("array[-1]:%d\n",array[-1]);
+printf("array[10]:%d\n",array[10]);
+#if 1
+
+
+
+#endif
     return 0;
 }
