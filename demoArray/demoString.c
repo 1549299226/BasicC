@@ -10,7 +10,7 @@ int main()
     printf("buffer1:%s\tbuffer[0]:%c\n",buffer1,buffer1[0]);
 
     char * ptr = "helloworld";
-    printf("ptr[0]:%c\t*(ptr+1):%c\n",ptr[0],*(ptr+0));
+    printf("ptr[0]:%c\t*(ptr+1):%c\n",ptr[0],*(ptr+1));
 
     //为什么字符串不能改，因为字符串是常量，它也可以存放在全局区
     ptr[0]='H';
