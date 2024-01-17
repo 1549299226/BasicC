@@ -60,16 +60,29 @@ int main()
     array[2] ="nihao";
     array[3] ="zhangsan";
     array[4] ="china";
-
+#if 0
     for (int idx = 0; idx < BUFFER_SIZE; idx++)
     {
         printf("array[%d] = %s\n",idx,array[idx]);
     }
-
+#endif
     //字符串数组
         // 1.他是一个数组
         // 2.存放的是字符串
-    printf("array[%d] = %s\n",array[0][0]);
+    //伏笔
+
+
+    printf("array[0]= %s\n",array[0]);
+    printf("array[0]= %s\n",*(array + 0));
+
+    printf("array[1][1]= %c\n",array[1][1]);
+   
+    printf("array[1][1]= %c\n",*(*(array[1] + 1)));
+    
+    array[1] = *(array + 1)
+
+    
+
 #endif
 
 return 0;

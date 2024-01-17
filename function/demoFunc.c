@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "calculateFunc.h"
+#include "strFunction.h"
 
 //函数参数：可以没有 也可以有
 //函数返回值：可以有也 可以没有
@@ -50,6 +51,12 @@ typedef enum STATUS_CODE
 typedef enum STATUS_CODE STATUS_CODE; //
 #endif
 
+void printStr()
+{
+    printf("hello world\n");
+
+}
+
 int main()
 {   
 #if 0
@@ -79,7 +86,7 @@ int main()
     int len = sizeof(status);
     printf("len :%d",len);
 #endif
-
+#if 0
     int num1 = 50;
     int num2 = 60;
     int sum = calculateAdd(num1,num2);
@@ -93,6 +100,23 @@ int main()
 
     int num4 = calculateDiv(num1,num2);
     printf("sum:%d",num4);
-    return 0 ;
+
+    char *ptr = "hello\0 world";
+    printf("len:%d\n",myLen(ptr));
+    printf("len:%d\n",strlen(ptr));
+#endif 
+
+    int choice = 0;
+    //函数指针就是钩子函数，主要用在回调函数中
+    
+    void(*func)()= printStr;
+    func();
+
+    if (choice == 1)
+    {
+        printStr();
+    }
+    
+    return 0 ; 
 
 }
